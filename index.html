@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <title>Cashback Mini – Die radikal einfache Cashback-Extension</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta name="theme-color" content="#16c784">
+    <meta name="language" content="de">
+    <meta name="keywords" content="Cashback, Browser Extension, Affiliate, Minimalismus, Skimlinks, Sparen, DACH">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#16c784',
+                            light: '#4dd8a5',
+                            dark: '#0e9c67',
+                        },
+                        secondary: '#276ef1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: '12px',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                    <i class="fa-solid fa-wallet text-white text-lg"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-900">Cashback Mini</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <span class="text-gray-600 hover:text-primary font-medium cursor-pointer">Features</span>
+                <span class="text-gray-600 hover:text-primary font-medium cursor-pointer">So funktioniert's</span>
+                <span class="text-gray-600 hover:text-primary font-medium cursor-pointer">Vergleich</span>
+                <span class="text-gray-600 hover:text-primary font-medium cursor-pointer">FAQ</span>
+            </nav>
+            <span class="bg-primary hover:bg-primary-dark text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">
+                Vormerken
+            </span>
+            <button class="md:hidden text-gray-600">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-white py-16 h-[600px] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Cashback Mini – Die radikal einfache Cashback-Extension
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Aktiviere Cashback mit nur einem Klick und erhalte 90 % der Provision. Kein Portal, keine Deals, kein Chaos.
+                </p>
+                <span class="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 text-lg cursor-pointer">
+                    <span>Bald verfügbar – Jetzt vormerken</span>
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                </span>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="bg-gray-100 rounded-lg p-4 shadow-lg relative z-10">
+                    <img class="w-full rounded-lg shadow-md" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7b4d5cea93-843b08329b436d5d24e1.png" alt="browser window with a minimalist cashback overlay notification showing 90% cashback available on an e-commerce site, clean interface" />
+                    <div class="absolute -top-4 -right-4 bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                        <div class="text-center">
+                            <div class="font-bold text-lg leading-none">90%</div>
+                            <div class="text-xs">Cashback</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary-light rounded-full opacity-20"></div>
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-secondary rounded-full opacity-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Was Cashback Mini besonders macht</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div id="feature-1" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-xl font-semibold mb-3">Ultra-Minimalistisch</h3>
+                    <p class="text-gray-600">Nur 1 Overlay – Kein Preisvergleich, keine Ablenkung. 100 % Fokus auf Cashback.</p>
+                </div>
+                <div id="feature-2" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-3">90 % Auszahlung</h3>
+                    <p class="text-gray-600">Wir geben dir 90 % der Provision. Mehr als die meisten Anbieter (Honey, Shoop & Co.).</p>
+                </div>
+                <div id="feature-3" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3">Blitzschnell aktiviert</h3>
+                    <p class="text-gray-600">Klick auf das Overlay, shoppe wie gewohnt – Cashback läuft automatisch.</p>
+                </div>
+                <div id="feature-4" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3">Datenschutzfreundlich</h3>
+                    <p class="text-gray-600">Keine Datenweitergabe, kein Tracking außerhalb der Shopping-Seiten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="howitworks" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">So einfach funktioniert's</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div id="step-1" class="relative">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4 h-48 flex items-center justify-center">
+                        <i class="fa-solid fa-download text-primary text-5xl"></i>
+                    </div>
+                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Extension installieren</h3>
+                    <p class="text-gray-600">Lade Cashback Mini aus dem Chrome Web Store (in Kürze verfügbar).</p>
+                </div>
+                <div id="step-2" class="relative">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4 h-48 flex items-center justify-center">
+                        <i class="fa-solid fa-bell text-primary text-5xl"></i>
+                    </div>
+                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Cashback aktivieren</h3>
+                    <p class="text-gray-600">Beim Shoppen wird das Cashback-Overlay angezeigt, wenn Cashback verfügbar ist.</p>
+                </div>
+                <div id="step-3" class="relative">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4 h-48 flex items-center justify-center">
+                        <i class="fa-solid fa-mouse-pointer text-primary text-5xl"></i>
+                    </div>
+                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Mit 1 Klick aktivieren</h3>
+                    <p class="text-gray-600">Ein Klick, Affiliate-Link gesetzt, fertig. Du kannst wie gewohnt einkaufen.</p>
+                </div>
+                <div id="step-4" class="relative">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-4 h-48 flex items-center justify-center">
+                        <i class="fa-solid fa-money-bill-transfer text-primary text-5xl"></i>
+                    </div>
+                    <div class="absolute -top-3 -right-3 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center font-bold">4</div>
+                    <h3 class="text-xl font-semibold mb-2">Guthaben sammeln & auszahlen</h3>
+                    <p class="text-gray-600">Ab 5 € per PayPal – schnell und unkompliziert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Warum Cashback Mini?</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-lg shadow-sm">
+                    <thead>
+                        <tr>
+                            <th class="p-4 text-left border-b border-gray-200"></th>
+                            <th class="p-4 text-center border-b border-gray-200">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mb-2">
+                                        <i class="fa-solid fa-wallet text-white"></i>
+                                    </div>
+                                    <span class="font-semibold">Cashback Mini</span>
+                                </div>
+                            </th>
+                            <th class="p-4 text-center border-b border-gray-200">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fa-solid fa-h text-white"></i>
+                                    </div>
+                                    <span class="font-semibold">Honey</span>
+                                </div>
+                            </th>
+                            <th class="p-4 text-center border-b border-gray-200">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fa-solid fa-s text-white"></i>
+                                    </div>
+                                    <span class="font-semibold">Shoop</span>
+                                </div>
+                            </th>
+                            <th class="p-4 text-center border-b border-gray-200">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mb-2">
+                                        <i class="fa-solid fa-t text-white"></i>
+                                    </div>
+                                    <span class="font-semibold">TopCashback</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Cashback für dich</td>
+                            <td class="p-4 border-b border-gray-200 text-center bg-green-50 font-semibold text-green-600">90 %</td>
+                            <td class="p-4 border-b border-gray-200 text-center">40–60 %</td>
+                            <td class="p-4 border-b border-gray-200 text-center">50–70 %</td>
+                            <td class="p-4 border-b border-gray-200 text-center">100 %*</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Benutzeroberfläche</td>
+                            <td class="p-4 border-b border-gray-200 text-center bg-green-50 font-semibold text-green-600">Minimalistisch</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Vollgepackt</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Portal</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Überladen</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Ablenkung</td>
+                            <td class="p-4 border-b border-gray-200 text-center bg-green-50 font-semibold text-green-600">Keine</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Viele Deals</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Viele Deals</td>
+                            <td class="p-4 border-b border-gray-200 text-center">Viele Deals</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">*TopCashback gibt offiziell 100 %, ist aber komplizierter in der Nutzung.</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section id="dashboard-preview" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6 border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-1">Dein Cashback-Konto</h2>
+                    <div class="flex items-baseline">
+                        <span class="text-4xl font-bold">€0.00</span>
+                        <span class="text-gray-500 ml-2 text-lg">verfügbar</span>
+                    </div>
+                    <div class="flex items-center mt-1 text-gray-600">
+                        <span>+ €12.75 ausstehend</span>
+                        <i class="fa-solid fa-circle-info ml-2 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex h-48 items-end p-6 border-b border-gray-200">
+                    <div class="w-full flex items-end space-x-2">
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="h-4 w-full bg-gray-100 mb-2"></div>
+                            <span class="text-xs text-gray-500">JAN</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="h-4 w-full bg-gray-100 mb-2"></div>
+                            <span class="text-xs text-gray-500">FEB</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="h-12 w-full bg-gray-200 mb-2"></div>
+                            <span class="text-xs text-gray-500">MÄR</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="h-8 w-full bg-gray-200 mb-2"></div>
+                            <span class="text-xs text-gray-500">APR</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="h-20 w-full bg-gray-200 mb-2"></div>
+                            <span class="text-xs text-gray-500">MAI</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="flex flex-col items-center">
+                                <span class="text-xs text-gray-700 mb-1">€12.75</span>
+                                <div class="h-32 w-full bg-primary rounded-sm"></div>
+                            </div>
+                            <span class="text-xs text-gray-500 mt-2">JUN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-medium text-lg">Neueste Aktivitäten</h3>
+                        <span class="text-gray-500">Gesamt: €12.75</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-tag text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Amazon.de</div>
+                                    <div class="text-sm text-gray-500">15. Juni 2025</div>
+                                </div>
+                            </div>
+                            <div class="font-medium">€8.50</div>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-gray-100">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-shirt text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Zalando</div>
+                                    <div class="text-sm text-gray-500">10. Juni 2025</div>
+                                </div>
+                            </div>
+                            <div class="font-medium">€4.25</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Häufig gestellte Fragen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div id="faq-1" class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-primary mr-2"></i>
+                        Wie verdient Cashback Mini Geld?
+                    </h3>
+                    <p class="text-gray-600">Wir behalten 10 % der Provision, 90 % gehen an dich. Massengeschäft, kein Schnickschnack.</p>
+                </div>
+                <div id="faq-2" class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-primary mr-2"></i>
+                        Wann bekomme ich mein Geld?
+                    </h3>
+                    <p class="text-gray-600">Ab 5 € Guthaben kannst du jederzeit per PayPal auszahlen lassen.</p>
+                </div>
+                <div id="faq-3" class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-primary mr-2"></i>
+                        Wer steckt hinter Cashback Mini?
+                    </h3>
+                    <p class="text-gray-600">Cashback Mini ist ein unabhängiges, von Usern für User entwickeltes Projekt. Kein Venture-Overkill.</p>
+                </div>
+                <div id="faq-4" class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fa-solid fa-circle-question text-primary mr-2"></i>
+                        Bei welchen Shops kann ich sparen?
+                    </h3>
+                    <p class="text-gray-600">Bei über 10.000 Shops in Deutschland, Österreich und der Schweiz – von Amazon bis Zalando.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Bleib auf dem Laufenden</h2>
+                <p class="text-xl text-gray-600 mb-8">Trage dich ein und erfahre als Erste*r vom Launch:</p>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <form class="flex flex-col md:flex-row gap-4">
+                        <div class="flex-1">
+                            <label for="email" class="sr-only">E-Mail-Adresse</label>
+                            <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200">
+                            Vormerken
+                        </button>
+                    </form>
+                    <p class="text-sm text-gray-500 mt-4">Wir senden dir nur eine E-Mail, wenn die Extension startet. Kein Spam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Bereit für unkompliziertes Cashback?</h2>
+            <p class="text-white text-xl mb-8 max-w-3xl mx-auto">Mehr Geld zurück, weniger Ablenkung. Cashback Mini ist die radikal einfache Lösung für alle, die beim Online-Shopping sparen wollen.</p>
+            <span class="inline-flex items-center bg-white text-primary hover:bg-gray-100 font-medium px-6 py-3 rounded-lg transition-colors duration-200 text-lg cursor-pointer">
+                <span>Jetzt für den Launch vormerken</span>
+                <i class="fa-solid fa-arrow-right ml-2"></i>
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                            <i class="fa-solid fa-wallet text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Cashback Mini</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Mehr Cashback, weniger Blabla.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <span class="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer">Impressum</span>
+                    <span class="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer">Datenschutz</span>
+                    <div class="flex space-x-4">
+                        <span class="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer">
+                            <i class="fa-brands fa-twitter text-xl"></i>
+                        </span>
+                        <span class="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </span>
+                        <span class="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center md:text-left">
+                <p class="text-gray-400">© 2025 Cashback Mini</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
